@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.bike {
+    width: 50rem;
+}
+
+.bike_content {
+    position: absolute;
+    bottom: 20%;
+}
+.blob_motion {
+    position: relative;
+    width: 70rem;
+    height: 60rem;
+}
+
+#LEFT-WHEEL {
+    animation: wheel 1s linear infinite;
+    transform-origin: center; 
+    transform-box: fill-box;
+}
+
+#RIGHT-WHEEL {
+    animation: wheel 1s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#HAT {
+    animation: hat 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#MAN-ON-THE-BIKE {
+    animation: bike 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+/* wheel animation  */
+@keyframes wheel {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/* bike animation  */
+@keyframes bike {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateX(20deg);
+    }
+}
+
+/* hat animation  */
+@keyframes hat {
+    from {
+        transform: translateY(0) rotateZ(0deg);
+    }
+
+    to {
+        transform: translateY(50%) rotateZ(10deg);
+    }
+}
