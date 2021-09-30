@@ -4,18 +4,17 @@
     box-sizing: border-box;
 }
 
-body {
+html,body{
+     font-size: 62.5%;
+    background: #fff;
+    background-image:radial-gradient(#fff,#e3e3e3);
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    flex-direction: column;
 }
-
-html {
-    font-size: 62.5%;
-}
-
 .bike {
     width: 50rem;
 }
